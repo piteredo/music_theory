@@ -58,10 +58,10 @@ pub struct Note {
     pub octave: Octave,
 }
 impl Note {
-    pub fn scale_interval(&self, other: Note) -> Interval {
+    /*pub fn scale_interval(&self, other: Note) -> Interval {
         let prefix =
         let sufix = self.scale_interval_sufix(other);
-    }
+    }*/
 
     fn scale_interval_sufix(&self, other: Note) -> u32 {
         let self_step = self.abs_scale_step();
@@ -118,6 +118,6 @@ mod test {
             pitch: Pitch{ step: Step::D, alter: Alter::Sharp },
             octave: Octave(5),
         };
-        note1.scale_interval(note2);
+        //note1.scale_interval(note2);
     }
 }
